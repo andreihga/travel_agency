@@ -1,10 +1,10 @@
 package org.com.sda.entity;
 
 import javax.persistence.*;
-import java.util.Objects;
 import java.util.Set;
 @NamedQueries({
-        @NamedQuery(name = "getHotelByNameAndCity", query = "select h from Hotel h where h.hotelName=:hotelName and h.city=:city")
+        @NamedQuery(name = "getHotelByNameAndCity", query = "select h from Hotel h where h.hotelName=:hotelName and h.city=:city"),
+        @NamedQuery(name = "getHotelByCity",query = "select h from Hotel h where h.city = :city")
 })
 @Entity
 @Table(name = "hotels")
@@ -22,10 +22,10 @@ public class Hotel {
     @JoinColumn(name = "city_id")
     private City city;
 
-    @OneToMany(fetch = FetchType.LAZY,cascade = CascadeType.ALL,mappedBy = "hotel")
+    @OneToMany(fetch = FetchType.EAGER,cascade = CascadeType.ALL,mappedBy = "hotel")
     private Set<Room> roomSet;
 
-    @OneToMany(fetch = FetchType.LAZY,cascade = CascadeType.ALL,mappedBy = "hotelId")
+    @OneToMany(fetch = FetchType.LAZY,cascade = CascadeType.ALL,mappedBy = "hotelTrip")
     private Set<Trip> tripSet;
 
     public Set<Room> getRoomSet() {
@@ -68,4 +68,16 @@ public class Hotel {
         this.standard = standard;
     }
 
+    @Override
+    public String toString() {
+        return "Hotel{" +
+                "hotel_id=" + hotel_id +
+                ", hotelName='" + hotelName + '\'' +
+                ", hotelDescription='" + hotelDescription + '\'' +
+                ", standard=" + standard +
+                ", city=" + city +
+                ", roomSet=" + roomSet +
+                ", tripSet=" + tripSet +
+                '}';
+    }
 }

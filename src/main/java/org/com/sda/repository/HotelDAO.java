@@ -8,6 +8,7 @@ import org.hibernate.Transaction;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.Query;
+import java.util.List;
 
 @Repository
 public class HotelDAO {
@@ -21,16 +22,16 @@ public class HotelDAO {
         session.close();
     }
 
-    public Hotel getHotelByNameAndCity(String hotelName, City city){
+    public Hotel getHotelByCity( City city){
         Session session = HibernateUtil.getSession();
         Transaction transaction = session.beginTransaction();
 
-        Query query = session.createNamedQuery("getHotelByNameAndCity");
-        query.setParameter("hotelName",hotelName);
+        Query query = session.createNamedQuery("getHotelByCity");
         query.setParameter("city",city);
         Hotel hotel = (Hotel) query.getSingleResult();
         transaction.commit();
         session.close();
         return hotel;
     }
+
 }

@@ -1,9 +1,10 @@
 package org.com.sda.entity;
 
 import javax.persistence.*;
-import java.util.Date;
+import java.sql.Date;
 @NamedQueries({
-        @NamedQuery(name = "getFlightByFlightNumber", query = "select f from Flight f where f.flightNumber=:flightNumber")
+        @NamedQuery(name = "getFlightByFlightNumber", query = "select f from Flight f where f.flightNumber=:flightNumber"),
+        @NamedQuery(name = "getFlightByDepartureDate", query = "select f from Flight f where f.departureDate = :departureDate")
 })
 @Entity
 @Table(name = "flights")

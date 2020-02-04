@@ -6,6 +6,8 @@ import org.com.sda.repository.HotelDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class HotelService {
     @Autowired
@@ -23,9 +25,10 @@ public class HotelService {
     }
 
     public Hotel getHotelByHotelDTO(HotelDTO hotelDTO){
-        Hotel hotel =hotelDAO.getHotelByNameAndCity(hotelDTO.getHotelName(),cityService.getCityFromCityDTO(hotelDTO.getCityDTO()));
+        Hotel hotel = hotelDAO.getHotelByCity(cityService.getCityFromCityDTO(hotelDTO.getCityDTO()));
         return hotel;
     }
+
 
     public HotelDTO getHotelDTOfromHotel(Hotel hotel){
         HotelDTO hotelDTO = new HotelDTO();

@@ -2,12 +2,12 @@ package org.com.sda.entity;
 
 import javax.persistence.*;
 import java.util.Date;
-import java.util.Objects;
+
 @NamedQueries({
-        @NamedQuery(name = "searchTrip", query = "select t from Trip t where (:departureFlight = null or t.departureFlightId=:departureFlight)" +
-                " and (:returnFlightId= null or t.returnFlightId =:returnFlightId)" +
-                " and (:city = null or t.hotelId.city=:city)" +
-                " and (:toHotel = null or t.hotelId=:toHotel)")
+        @NamedQuery(name = "searchTrip", query = "select t from Trip t where (:departureFlight = null or t.departureFlightTrip=:departureFlight)" +
+                " and (:returnFlightId= null or t.returnFlightTrip =:returnFlightId)" +
+                " and (:city = null or t.hotelTrip.city=:city)" +
+                " and (:toHotel = null or t.hotelTrip=:toHotel)")
         //+
           //      " and (:nrOfPersonsOnThePlane = null or t.departureFlightId.availableSeats=:nrOfPersonsOnThePlane )")
 })
@@ -19,15 +19,15 @@ public class Trip {
 
     @OneToOne
     @JoinColumn(name = "departure_flight_id")
-    private Flight departureFlightId;
+    private Flight departureFlightTrip;
 
     @OneToOne
     @JoinColumn(name = "return_flight_id")
-    private Flight returnFlightId;
+    private Flight returnFlightTrip;
 
     @ManyToOne
     @JoinColumn(name = "hotel_id")
-    private Hotel hotelId;
+    private Hotel hotelTrip;
 
     @Column(name = "departure_date_hotel")
     private Date departureDateHotel;
@@ -36,28 +36,28 @@ public class Trip {
     @Column(name = "promoted")
     private boolean isPromoted;
 
-    public Flight getDepartureFlightId() {
-        return departureFlightId;
+    public Flight getDepartureFlightTrip() {
+        return departureFlightTrip;
     }
 
-    public void setDepartureFlightId(Flight departureFlightId) {
-        this.departureFlightId = departureFlightId;
+    public void setDepartureFlightTrip(Flight departureFlightId) {
+        this.departureFlightTrip = departureFlightId;
     }
 
-    public Flight getReturnFlightId() {
-        return returnFlightId;
+    public Flight getReturnFlightTrip() {
+        return returnFlightTrip;
     }
 
-    public void setReturnFlightId(Flight returnFlightId) {
-        this.returnFlightId = returnFlightId;
+    public void setReturnFlightTrip(Flight returnFlightId) {
+        this.returnFlightTrip = returnFlightId;
     }
 
-    public Hotel getHotelId() {
-        return hotelId;
+    public Hotel getHotelTrip() {
+        return hotelTrip;
     }
 
-    public void setHotelId(Hotel hotelId) {
-        this.hotelId = hotelId;
+    public void setHotelTrip(Hotel hotelId) {
+        this.hotelTrip = hotelId;
     }
 
     public Date getDepartureDateHotel() {
