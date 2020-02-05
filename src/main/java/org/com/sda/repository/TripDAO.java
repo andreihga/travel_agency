@@ -1,6 +1,7 @@
 package org.com.sda.repository;
 
 import org.com.sda.config.HibernateUtil;
+import org.com.sda.entity.City;
 import org.com.sda.entity.Trip;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -19,15 +20,15 @@ public class TripDAO {
         session.close();
     }
 
-    public List<Trip> searchTrip(Trip trip){
+    public List<Trip> searchTrip(Trip trip, City city){
         Session session = HibernateUtil.getSession();
         Transaction transaction = session.beginTransaction();
 
         Query query = session.createNamedQuery("searchTrip");
-        query.setParameter("departureFlight", trip.getDepartureFlightId());
-        query.setParameter("returnFlightId", trip.getReturnFlightId());
-        query.setParameter("city", trip.getHotelId().getCity());
-        query.setParameter("toHotel",trip.getHotelId());
+        query.setParameter("departureFlight", trip.getDepartureFlightTrip());
+        query.setParameter("returnFlightId", trip.getReturnFlightTrip());
+        query.setParameter("city", city);
+        query.setParameter("toHotel",trip.getHotelTrip());
         List<Trip> tripList = query.getResultList();
 
         transaction.commit();
@@ -35,4 +36,5 @@ public class TripDAO {
 
         return tripList;
     }
+
 }

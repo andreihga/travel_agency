@@ -32,4 +32,10 @@ public class ContinentService {
         return continent;
     }
 
+    public Continent getContinentFromContinentDTO(ContinentDTO continentDTO){
+        Continent continent = new Continent();
+        continent.setContinent_name(continentDTO.getContinentName());
+        return continent;
+    }
+
 }

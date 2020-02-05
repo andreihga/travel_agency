@@ -28,6 +28,8 @@
         <mapping class="org.com.sda.entity.Hotel"/>
         <mapping class="org.com.sda.entity.Room"/>
         <mapping class="org.com.sda.entity.Trip"/>
+        <mapping class="org.com.sda.entity.TripDetails"/>
+        <mapping class="org.com.sda.entity.User"/>
 
     </session-factory>
 </hibernate-configuration>

@@ -2,10 +2,13 @@ package org.com.sda.service;
 
 import org.com.sda.dto.AirportDTO;
 import org.com.sda.dto.FlightDTO;
+import org.com.sda.dto.TripDTO;
 import org.com.sda.entity.Flight;
 import org.com.sda.repository.FlightDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class FlightService {
@@ -26,7 +29,17 @@ public class FlightService {
         flightDAO.addFlight(flight);
     }
 
-    public Flight getFlightFromFlightDTO(FlightDTO flightDTO){
+    public Flight getFlightFromFlightDTOByDepartureDate(FlightDTO flightDTO){
+        if(flightDTO == null){
+            return null;
+        } else {
+            Flight flight = flightDAO.getFlightByDepartureDate(flightDTO.getDepartureDate());
+            return flight;
+        }
+    }
+
+
+    public Flight getFlightsByFlightDTO(FlightDTO flightDTO){
         Flight flight = flightDAO.getFlightByFlightNumber(flightDTO.getFlightNumber());
         return flight;
     }

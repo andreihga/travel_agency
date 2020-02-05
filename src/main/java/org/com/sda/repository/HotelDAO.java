@@ -8,6 +8,7 @@ import org.hibernate.Transaction;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.Query;
+import java.util.List;
 
 @Repository
 public class HotelDAO {
@@ -33,4 +34,5 @@ public class HotelDAO {
         session.close();
         return hotel;
     }
+
 }

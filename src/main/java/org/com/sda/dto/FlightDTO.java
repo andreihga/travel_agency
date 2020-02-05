@@ -1,6 +1,6 @@
 package org.com.sda.dto;
 
-import java.util.Date;
+import java.sql.Date;
 
 public class FlightDTO {
     private String flightNumber;

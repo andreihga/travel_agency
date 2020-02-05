@@ -1,6 +1,7 @@
 package org.com.sda.repository;
 
 import org.com.sda.config.HibernateUtil;
+import org.com.sda.dto.CityDTO;
 import org.com.sda.entity.City;
 import org.com.sda.entity.Country;
 import org.hibernate.Session;
@@ -24,6 +25,7 @@ public class CityDAO {
 
         return city;
     }
+
 
     public void addCity(City city) {
         Session session = HibernateUtil.getSession();

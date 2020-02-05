@@ -1,40 +1,76 @@
 package org.com.sda.dto;
 
-import org.com.sda.entity.Flight;
-import org.com.sda.entity.Hotel;
-
-import java.util.Date;
+import java.sql.Date;
 
 public class TripDTO {
-    private FlightDTO departureFlightId;
-    private FlightDTO returnFlightId;
-    private HotelDTO hotelId;
+    private FlightDTO departureFlightTripDTO;
+    private FlightDTO returnFlightTripDTO;
+    private HotelDTO hotelTripDTO;
     private Date departureDateHotel;
     private Date returnDateHotel;
     private boolean isPromoted;
+    private int nrOfPersons;
+    private int nrDoubleRooms;
+    private int nrSingleRooms;
 
-    public FlightDTO getDepartureFlightId() {
-        return departureFlightId;
+    public int getNrDoubleRooms() {
+        return nrDoubleRooms;
     }
 
-    public void setDepartureFlightId(FlightDTO departureFlightId) {
-        this.departureFlightId = departureFlightId;
+    public void setNrDoubleRooms(int nrDoubleRooms) {
+        this.nrDoubleRooms = nrDoubleRooms;
     }
 
-    public FlightDTO getReturnFlightId() {
-        return returnFlightId;
+    public int getNrSingleRooms() {
+        return nrSingleRooms;
     }
 
-    public void setReturnFlightId(FlightDTO returnFlightId) {
-        this.returnFlightId = returnFlightId;
+    public void setNrSingleRooms(int nrSingleRooms) {
+        this.nrSingleRooms = nrSingleRooms;
     }
 
-    public HotelDTO getHotelId() {
-        return hotelId;
+    public int getNrExtraBeds() {
+        return nrExtraBeds;
     }
 
-    public void setHotelId(HotelDTO hotelId) {
-        this.hotelId = hotelId;
+    public void setNrExtraBeds(int nrExtraBeds) {
+        this.nrExtraBeds = nrExtraBeds;
+    }
+
+    private int nrExtraBeds;
+
+
+
+    public int getNrOfPersons() {
+        return nrOfPersons;
+    }
+
+    public void setNrOfPersons(int nrOfPersons) {
+        this.nrOfPersons = nrOfPersons;
+    }
+
+    public FlightDTO getDepartureFlightTripDTO() {
+        return departureFlightTripDTO;
+    }
+
+    public void setDepartureFlightTripDTO(FlightDTO departureFlightTripDTO) {
+        this.departureFlightTripDTO = departureFlightTripDTO;
+    }
+
+    public FlightDTO getReturnFlightTripDTO() {
+        return returnFlightTripDTO;
+    }
+
+    public void setReturnFlightTripDTO(FlightDTO returnFlightTripDTO) {
+        this.returnFlightTripDTO = returnFlightTripDTO;
+    }
+
+    public HotelDTO getHotelTripDTO() {
+        return hotelTripDTO;
+    }
+
+    public void setHotelTripDTO(HotelDTO hotelTripDTO) {
+        this.hotelTripDTO = hotelTripDTO;
     }
 
     public Date getDepartureDateHotel() {

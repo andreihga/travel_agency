@@ -1,16 +1,19 @@
 package org.com.sda.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
+@NamedQueries({
+        @NamedQuery(name = "findUser", query = "select u from User u where u.email = :email and u.password = :password"),
+        @NamedQuery(name = "findExistingUser", query = "select u from User u where u.email = :email")
+})
 @Entity
 @Table(name = "users")
 public class User {
     @Id
-    private int userId;
+    private int user_id;
     @Column(name = "first_name")
     private String firstName;
     @Column(name = "last_name")
@@ -22,35 +25,8 @@ public class User {
     @Column(name = "total_amount")
     private double totalAmount;
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "userId=" + userId +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", password='" + password + '\'' +
-                ", email='" + email + '\'' +
-                ", totalAmount=" + totalAmount +
-                '}';
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        User user = (User) o;
-        return userId == user.userId &&
-                Double.compare(user.totalAmount, totalAmount) == 0 &&
-                Objects.equals(firstName, user.firstName) &&
-                Objects.equals(lastName, user.lastName) &&
-                Objects.equals(password, user.password) &&
-                Objects.equals(email, user.email);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(userId, firstName, lastName, password, email, totalAmount);
-    }
+//    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "user")
+//    private Set<TripDetails> tripDetailsSet = new HashSet<>();
 
     public String getFirstName() {
         return firstName;
@@ -91,4 +67,12 @@ public class User {
     public void setTotalAmount(double totalAmount) {
         this.totalAmount = totalAmount;
     }
+//
+//    public Set<TripDetails> getTripDetailsSet() {
+//        return tripDetailsSet;
+//    }
+//
+//    public void setTripDetailsSet(Set<TripDetails> tripDetailsSet) {
+//        this.tripDetailsSet = tripDetailsSet;
+//    }
 }
