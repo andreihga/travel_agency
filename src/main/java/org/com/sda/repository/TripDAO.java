@@ -37,4 +37,17 @@ public class TripDAO {
         return tripList;
     }
 
+    public Trip findTrip(Trip trip){
+        Session session = HibernateUtil.getSession();
+        Transaction transaction = session.beginTransaction();
+        Query query = session.createNamedQuery("findTrip");
+        query.setParameter("departureDate",trip.getDepartureFlightTrip());
+        query.setParameter("returnDate",trip.getReturnFlightTrip());
+        query.setParameter("hotel", trip.getHotelTrip());
+        Trip trip1 = (Trip)query.getSingleResult();
+        transaction.commit();
+        session.close();
+        return trip1;
+    }
+
 }

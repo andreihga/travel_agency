@@ -26,4 +26,5 @@ public class UserService {
         user.setPassword(userDTO.getPassword());
         return userDAO.login(user);
     }
+
 }

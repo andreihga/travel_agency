@@ -23,16 +23,16 @@ public class Hotel {
     private City city;
 
     @OneToMany(fetch = FetchType.EAGER,cascade = CascadeType.ALL,mappedBy = "hotel")
-    private Set<Room> roomSet;
+    private Set<RoomAvailability> roomSet;
 
     @OneToMany(fetch = FetchType.LAZY,cascade = CascadeType.ALL,mappedBy = "hotelTrip")
     private Set<Trip> tripSet;
 
-    public Set<Room> getRoomSet() {
+    public Set<RoomAvailability> getRoomSet() {
         return roomSet;
     }
 
-    public void setRoomSet(Set<Room> roomSet) {
+    public void setRoomSet(Set<RoomAvailability> roomSet) {
         this.roomSet = roomSet;
     }
 

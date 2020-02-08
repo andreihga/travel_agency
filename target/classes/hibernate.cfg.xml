@@ -26,7 +26,7 @@
         <mapping class="org.com.sda.entity.Airport"/>
         <mapping class="org.com.sda.entity.Flight"/>
         <mapping class="org.com.sda.entity.Hotel"/>
-        <mapping class="org.com.sda.entity.Room"/>
+        <mapping class="org.com.sda.entity.RoomAvailability"/>
         <mapping class="org.com.sda.entity.Trip"/>
         <mapping class="org.com.sda.entity.TripDetails"/>
         <mapping class="org.com.sda.entity.User"/>

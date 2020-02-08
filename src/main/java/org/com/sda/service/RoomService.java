@@ -1,9 +1,8 @@
 package org.com.sda.service;
 
 import org.com.sda.dto.RoomDTO;
-import org.com.sda.entity.Hotel;
-import org.com.sda.entity.Room;
-import org.com.sda.repository.RoomDAO;
+import org.com.sda.entity.RoomAvailability;
+import org.com.sda.repository.RoomAvailabilityDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,10 +12,10 @@ public class RoomService {
     private HotelService hotelService;
 
     @Autowired
-    private RoomDAO roomDAO;
+    private RoomAvailabilityDAO roomDAO;
 
     public void addRoom(RoomDTO roomDTO){
-        Room room = new Room();
+        RoomAvailability room = new RoomAvailability();
         room.setFromDate(roomDTO.getFromDate());
         room.setToDate(roomDTO.getToDate());
         room.setNumberDoubleRoomsAvailable(roomDTO.getNrOfAvailableDoubleRooms());
@@ -26,7 +25,6 @@ public class RoomService {
         room.setPriceSingleRoom(roomDTO.getPriceSingleRoom());
         room.setPriceExtraBed(roomDTO.getPriceExtraBed());
         room.setHotel(hotelService.getHotelByHotelDTO(roomDTO.getHotelDTO()));
-
         roomDAO.addRoom(room);
     }
 }

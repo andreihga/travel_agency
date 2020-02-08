@@ -8,7 +8,6 @@
         <outputRelativeToContentRoot value="true" />
         <module name="travel_agency_java_project" />
         <module name="travel_agency" />
-        <module name="travel_agency_java_project" />
       </profile>
     </annotationProcessing>
   </component>

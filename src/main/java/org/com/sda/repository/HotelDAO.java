@@ -12,7 +12,7 @@ import java.util.List;
 
 @Repository
 public class HotelDAO {
-    public void addHotel(Hotel hotel){
+    public void addHotel(Hotel hotel) {
         Session session = HibernateUtil.getSession();
         Transaction transaction = session.beginTransaction();
 
@@ -22,13 +22,25 @@ public class HotelDAO {
         session.close();
     }
 
-    public Hotel getHotelByCity( City city){
+    public Hotel getHotelByCity(City city) {
         Session session = HibernateUtil.getSession();
         Transaction transaction = session.beginTransaction();
 
         Query query = session.createNamedQuery("getHotelByCity");
-        query.setParameter("city",city);
+        query.setParameter("city", city);
         Hotel hotel = (Hotel) query.getSingleResult();
+        transaction.commit();
+        session.close();
+        return hotel;
+    }
+
+    public Hotel getHotelByNameAndCity(String hotelName, City city) {
+        Session session = HibernateUtil.getSession();
+        Transaction transaction = session.beginTransaction();
+        Query query = session.createNamedQuery("getHotelByNameAndCity");
+        query.setParameter("hotelName",hotelName);
+        query.setParameter("city", city);
+        Hotel hotel = (Hotel)query.getSingleResult();
         transaction.commit();
         session.close();
         return hotel;

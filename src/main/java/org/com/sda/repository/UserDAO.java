@@ -1,6 +1,5 @@
 package org.com.sda.repository;
 
-import org.com.sda.Exceptions.UserAlreadyExists;
 import org.com.sda.config.HibernateUtil;
 import org.com.sda.entity.User;
 import org.hibernate.Session;

@@ -3,7 +3,7 @@ package org.com.sda.service;
 import org.com.sda.dto.TripDTO;
 import org.com.sda.entity.City;
 import org.com.sda.entity.Hotel;
-import org.com.sda.entity.Room;
+import org.com.sda.entity.RoomAvailability;
 import org.com.sda.entity.Trip;
 import org.com.sda.repository.TripDAO;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -66,9 +66,9 @@ public class TripService {
             tripDTO1.setDepartureFlightTripDTO(flightService.getFlightDTOFromFlight(t.getDepartureFlightTrip()));
             tripDTO1.setReturnFlightTripDTO(flightService.getFlightDTOFromFlight(t.getReturnFlightTrip()));
             Hotel hotel = t.getHotelTrip();
-            Set<Room> roomSet = hotel.getRoomSet();
-            Set<Room> roomsAvailableSet = new HashSet<>();
-            for (Room r : roomSet) {
+            Set<RoomAvailability> roomSet = hotel.getRoomSet();
+            Set<RoomAvailability> roomsAvailableSet = new HashSet<>();
+            for (RoomAvailability r : roomSet) {
                 if (tripDTO.getNrDoubleRooms() < r.getNumberDoubleRoomsAvailable() && tripDTO.getNrSingleRooms() < r.getNumberSingleRoomsAvailable() && tripDTO.getNrExtraBeds() < r.getNumberOfExtraBedsAvailable()) {
                     roomsAvailableSet.add(r);
                 }
@@ -78,5 +78,13 @@ public class TripService {
             tripDTOList.add(tripDTO1);
         }
         return tripDTOList;
+    }
+
+    public Trip findTrip(TripDTO tripDTO){
+        Trip trip = new Trip();
+        trip.setDepartureFlightTrip(flightService.getFlightsByFlightDTO(tripDTO.getDepartureFlightTripDTO()));
+        trip.setReturnFlightTrip(flightService.getFlightsByFlightDTO(tripDTO.getReturnFlightTripDTO()));
+        trip.setHotelTrip(hotelService.getHotelByHotelDTO(tripDTO.getHotelTripDTO()));
+        return tripDAO.findTrip(trip);
     }
 }
