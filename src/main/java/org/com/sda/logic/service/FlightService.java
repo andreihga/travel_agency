@@ -1,16 +1,13 @@
-package org.com.sda.service;
+package org.com.sda.logic.service;
 
 import org.com.sda.Exceptions.SeatsUnavailable;
-import org.com.sda.dto.AirportDTO;
 import org.com.sda.dto.FlightDTO;
-import org.com.sda.dto.TripDTO;
 import org.com.sda.entity.Flight;
 import org.com.sda.entity.Trip;
+import org.com.sda.logic.service.AirportService;
 import org.com.sda.repository.FlightDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 @Service
 public class FlightService {

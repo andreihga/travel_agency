@@ -1,4 +1,4 @@
-package org.com.sda.service;
+package org.com.sda.logic.service;
 
 import org.com.sda.Exceptions.RoomsUnavailable;
 import org.com.sda.Exceptions.SeatsUnavailable;

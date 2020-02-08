@@ -1,8 +1,8 @@
 package org.com.sda.rest;
 
 import org.com.sda.dto.CountryDTO;
-import org.com.sda.service.ContinentService;
-import org.com.sda.service.CountryService;
+import org.com.sda.logic.service.ContinentService;
+import org.com.sda.logic.service.CountryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

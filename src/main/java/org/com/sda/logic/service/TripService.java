@@ -1,10 +1,13 @@
-package org.com.sda.service;
+package org.com.sda.logic.service;
 
 import org.com.sda.dto.TripDTO;
 import org.com.sda.entity.City;
 import org.com.sda.entity.Hotel;
 import org.com.sda.entity.RoomAvailability;
 import org.com.sda.entity.Trip;
+import org.com.sda.logic.service.CityService;
+import org.com.sda.logic.service.FlightService;
+import org.com.sda.logic.service.HotelService;
 import org.com.sda.repository.TripDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

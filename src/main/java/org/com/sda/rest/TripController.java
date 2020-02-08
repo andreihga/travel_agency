@@ -1,10 +1,9 @@
 package org.com.sda.rest;
 
-import org.com.sda.Exceptions.RoomsUnavailable;
 import org.com.sda.dto.TripDTO;
 import org.com.sda.dto.TripDetailsDTO;
-import org.com.sda.service.TripDetailsService;
-import org.com.sda.service.TripService;
+import org.com.sda.logic.service.TripDetailsService;
+import org.com.sda.logic.service.TripService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
