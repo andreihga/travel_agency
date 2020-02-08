@@ -2,39 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="097d7646-a8d4-4ac3-b6bf-cf46836a731b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/com/sda/Exceptions/SeatsUnavailable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sda/dto/TripDetailsDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sda/dto/TripDetailsDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sda/dto/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sda/dto/UserDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sda/entity/Flight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sda/entity/Flight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sda/entity/Room.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sda/entity/RoomAvailability.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sda/entity/RoomAvailability.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sda/entity/TripDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sda/entity/TripDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sda/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sda/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sda/repository/RoomDAO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sda/repository/TripDetailsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sda/repository/TripDetailsDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sda/repository/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sda/repository/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sda/rest/RoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sda/rest/RoomController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sda/service/FlightService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sda/service/FlightService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sda/service/RoomAvailabilityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sda/service/RoomAvailabilityService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sda/service/RoomService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sda/service/TripDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sda/service/TripDetailsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/com/sda/dto/TripDetailsDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/com/sda/dto/TripDetailsDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/com/sda/dto/UserDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/com/sda/dto/UserDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/com/sda/entity/Flight.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/com/sda/entity/Flight.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/com/sda/entity/Room.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/com/sda/entity/RoomAvailability.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/com/sda/entity/RoomAvailability.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/com/sda/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/com/sda/entity/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/com/sda/repository/RoomDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/com/sda/repository/TripDetailsDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/com/sda/repository/TripDetailsDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/com/sda/repository/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/com/sda/repository/UserDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/com/sda/rest/RoomController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/com/sda/rest/RoomController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/com/sda/service/FlightService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/com/sda/service/FlightService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/com/sda/service/RoomAvailabilityService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/com/sda/service/RoomAvailabilityService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/com/sda/service/RoomService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/com/sda/service/TripDetailsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/com/sda/service/TripDetailsService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/com/sda/entity/TripDetails.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/com/sda/entity/TripDetails.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,7 +147,7 @@
       <workItem from="1581103284145" duration="2313000" />
       <workItem from="1581149981924" duration="6611000" />
       <workItem from="1581157101430" duration="8975000" />
-      <workItem from="1581174874958" duration="827000" />
+      <workItem from="1581174874958" duration="1909000" />
     </task>
     <task id="LOCAL-00001" summary="- created logIn and signUp">
       <created>1580925268644</created>
@@ -187,7 +156,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580925268644</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="- updated Rooms Available, Flight Seats, User Amount">
+      <created>1581180379754</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1581180379754</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -195,7 +171,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="- created logIn and signUp" />
-    <option name="LAST_COMMIT_MESSAGE" value="- created logIn and signUp" />
+    <MESSAGE value="- updated Rooms Available, Flight Seats, User Amount" />
+    <option name="LAST_COMMIT_MESSAGE" value="- updated Rooms Available, Flight Seats, User Amount" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="28" key="#Assign_Data_Sources" timestamp="1579989246068">
@@ -236,9 +213,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="413" y="117" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.738@0.0.1366.738" timestamp="1581153148553" />
-    <state x="520" y="114" key="CommitChangelistDialog2" timestamp="1580925266437">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="370" y="0" key="CommitChangelistDialog2" timestamp="1581180378096">
+      <screen x="0" y="0" width="1366" height="738" />
     </state>
+    <state x="370" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1581180378096" />
     <state x="520" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1580925266437" />
     <state x="463" y="111" key="FileChooserDialogImpl" timestamp="1581150014678">
       <screen x="0" y="0" width="1366" height="738" />
@@ -304,9 +282,10 @@
     </state>
     <state x="184" y="12" key="SettingsEditor/0.0.1366.738/1366.0.1920.1050@0.0.1366.738" timestamp="1580217306961" />
     <state x="184" y="12" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1581157074994" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1580925283055">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="393" y="179" key="Vcs.Push.Dialog.v2" timestamp="1581180411925">
+      <screen x="0" y="0" width="1366" height="738" />
     </state>
+    <state x="393" y="179" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1581180411925" />
     <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1580925283055" />
     <state x="818" y="266" key="com.intellij.database.view.ui.DbObjectDialog" timestamp="1580775834322">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -325,10 +304,14 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="0" y="0" width="737" height="738" key="find.popup/0.0.1366.738@0.0.1366.738" timestamp="1580490422346" />
-    <state x="65" y="65" key="new project wizard" timestamp="1580337581825">
+    <state x="393" y="161" key="git4idea.merge.GitPullDialog" timestamp="1581196768021">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="65" y="65" key="new project wizard/0.0.1366.738@0.0.1366.738" timestamp="1580337581825" />
+    <state x="393" y="161" key="git4idea.merge.GitPullDialog/0.0.1366.738@0.0.1366.738" timestamp="1581196768021" />
+    <state x="65" y="65" key="new project wizard" timestamp="1581180747422">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="65" y="65" key="new project wizard/0.0.1366.738@0.0.1366.738" timestamp="1581180747422" />
     <state x="371" y="216" width="707" height="305" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1580217181162">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
