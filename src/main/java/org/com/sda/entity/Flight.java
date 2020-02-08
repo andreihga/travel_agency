@@ -4,7 +4,8 @@ import javax.persistence.*;
 import java.sql.Date;
 @NamedQueries({
         @NamedQuery(name = "getFlightByFlightNumber", query = "select f from Flight f where f.flightNumber=:flightNumber"),
-        @NamedQuery(name = "getFlightByDepartureDate", query = "select f from Flight f where f.departureDate = :departureDate")
+        @NamedQuery(name = "getFlightByDepartureDate", query = "select f from Flight f where f.departureDate = :departureDate"),
+        @NamedQuery(name = "updateSeats", query = "update Flight as f set f.availableSeats=:updateAvailableSeats where f.airport=:airport")
 })
 @Entity
 @Table(name = "flights")

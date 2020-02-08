@@ -7,7 +7,8 @@ import java.util.Set;
 
 @NamedQueries({
         @NamedQuery(name = "findUser", query = "select u from User u where u.email = :email and u.password = :password"),
-        @NamedQuery(name = "findExistingUser", query = "select u from User u where u.email = :email")
+        @NamedQuery(name = "findExistingUser", query = "select u from User u where u.email = :email"),
+        @NamedQuery(name = "updateUserAmount", query = "update User as u set u.totalAmount=:amount where u.email=:email")
 })
 @Entity
 @Table(name = "users")

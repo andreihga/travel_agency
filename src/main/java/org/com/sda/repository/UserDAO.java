@@ -25,7 +25,7 @@ public class UserDAO {
 //    we will search by email if the user already exists
     public User findExistingUser (String email){
         Session session = HibernateUtil.getSession();
-        Transaction transaction = session.getTransaction();
+        Transaction transaction = session.beginTransaction();
         Query query = session.createNamedQuery("findExistingUser");
         query.setParameter("email",email);
         User user = (User)query.getSingleResult();

@@ -19,7 +19,17 @@ public class TripDetailsDTO {
 
     private int extraBed;
 
+    private int nrOfPersons;
+
     private double amount;
+
+    public int getNrOfPersons() {
+        return nrOfPersons;
+    }
+
+    public void setNrOfPersons(int nrOfPersons) {
+        this.nrOfPersons = nrOfPersons;
+    }
 
     public TripDTO getTrip() {
         return trip;

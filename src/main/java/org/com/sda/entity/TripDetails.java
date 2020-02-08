@@ -1,6 +1,7 @@
 package org.com.sda.entity;
 
 import javax.persistence.*;
+import java.sql.Timestamp;
 import java.util.Objects;
 
 @Entity
@@ -25,6 +26,16 @@ public class TripDetails {
     private int extraBed;
     @Column(name = "amount")
     private double amount;
+    @Column
+    private Timestamp timestamp;
+
+    public Timestamp getTimestamp() {
+        return timestamp;
+    }
+
+    public void setTimestamp(Timestamp timestamp) {
+        this.timestamp = timestamp;
+    }
 
     public User getUser() {
         return user;

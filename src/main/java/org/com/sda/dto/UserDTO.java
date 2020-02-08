@@ -41,4 +41,9 @@ public class UserDTO {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    @Override
+    protected void finalize() throws Throwable {
+        System.out.println("finalize kkk");
+    }
 }
