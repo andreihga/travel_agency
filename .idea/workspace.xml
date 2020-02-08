@@ -2,29 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="097d7646-a8d4-4ac3-b6bf-cf46836a731b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/travel_agency.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/com/sda/logic/consts/Consts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sda/repository/TripDetailsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sda/repository/TripDetailsDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sda/rest/AirportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sda/rest/AirportController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sda/rest/CityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sda/rest/CityController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sda/rest/CountryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sda/rest/CountryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sda/rest/FlightController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sda/rest/FlightController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sda/rest/HotelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sda/rest/HotelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sda/rest/RoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sda/rest/RoomController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sda/rest/TripController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sda/rest/TripController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sda/rest/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sda/rest/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sda/service/AirportService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sda/logic/service/AirportService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sda/service/CityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sda/logic/service/CityService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sda/service/ContinentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sda/logic/service/ContinentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sda/service/CountryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sda/logic/service/CountryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sda/service/FlightService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sda/logic/service/FlightService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sda/service/HotelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sda/logic/service/HotelService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sda/service/RoomAvailabilityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sda/logic/service/RoomAvailabilityService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sda/service/TripDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sda/logic/service/TripDetailsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sda/service/TripService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sda/logic/service/TripService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sda/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sda/logic/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sda/logic/consts/Consts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sda/logic/consts/Consts.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +49,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="SortingFunctionalities" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -174,7 +152,7 @@
       <workItem from="1581149981924" duration="6611000" />
       <workItem from="1581157101430" duration="8975000" />
       <workItem from="1581174874958" duration="827000" />
-      <workItem from="1581196213919" duration="373000" />
+      <workItem from="1581196213919" duration="937000" />
     </task>
     <task id="LOCAL-00001" summary="- created logIn and signUp">
       <created>1580925268644</created>
@@ -183,7 +161,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580925268644</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="- created a new package [logic]&#10;- in logic I'll have service included and some others that will help me in the 'program's logic'">
+      <created>1581196683487</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1581196683487</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,7 +176,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="- created logIn and signUp" />
-    <option name="LAST_COMMIT_MESSAGE" value="- created logIn and signUp" />
+    <MESSAGE value="- created a new package [logic]&#10;- in logic I'll have service included and some others that will help me in the 'program's logic'" />
+    <option name="LAST_COMMIT_MESSAGE" value="- created a new package [logic]&#10;- in logic I'll have service included and some others that will help me in the 'program's logic'" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="28" key="#Assign_Data_Sources" timestamp="1579989246068">
@@ -215,11 +201,15 @@
     <state x="488" y="71" key="#com.intellij.ide.util.MemberChooser/0.0.1366.738/1366.0.1920.1050@0.0.1366.738" timestamp="1580218030427" />
     <state x="488" y="71" key="#com.intellij.ide.util.MemberChooser/0.0.1366.738@0.0.1366.738" timestamp="1581174954533" />
     <state x="686" y="100" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1580925490888" />
-    <state x="575" y="290" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1581196880082">
-      <screen x="0" y="0" width="1366" height="738" />
+    <state x="808" y="408" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1581197125285">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="575" y="290" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1366.738@0.0.1366.738" timestamp="1581196880082" />
-    <state x="808" y="408" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581196265887" />
+    <state x="808" y="408" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581197125285" />
+    <state x="540" y="174" key="#com.intellij.openapi.projectRoots.ui.ProjectJdksEditor" timestamp="1581197121830">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="540" y="174" key="#com.intellij.openapi.projectRoots.ui.ProjectJdksEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1581197121830" />
     <state x="479" y="229" width="408" height="288" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1581157481780">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -237,13 +227,13 @@
     </state>
     <state x="370" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1581196975079" />
     <state x="520" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1580925266437" />
-    <state x="463" y="111" key="FileChooserDialogImpl" timestamp="1581150014678">
-      <screen x="0" y="0" width="1366" height="738" />
+    <state x="651" y="156" key="FileChooserDialogImpl" timestamp="1581197113208">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="463" y="111" key="FileChooserDialogImpl/0.0.1366.738/1366.0.1280.690@0.0.1366.738" timestamp="1580558416536" />
     <state x="463" y="111" key="FileChooserDialogImpl/0.0.1366.738/1366.0.1920.1050@0.0.1366.738" timestamp="1580217269683" />
     <state x="463" y="111" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1581150014678" />
-    <state x="651" y="156" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1580921683189" />
+    <state x="651" y="156" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1581197113208" />
     <state width="1323" height="120" key="GridCell.Tab.0.bottom" timestamp="1581169845646">
       <screen x="0" y="0" width="1366" height="738" />
     </state>

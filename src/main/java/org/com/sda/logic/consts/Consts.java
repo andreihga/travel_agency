@@ -5,4 +5,7 @@ public class Consts {
         System.out.println("forPc");
         System.out.println("forPc");
     }
+    public void doesNothing2(){
+        System.out.println("4 laptop");
+    }
 }
