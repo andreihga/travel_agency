@@ -1,7 +1,7 @@
 package org.com.sda.rest;
 
 import org.com.sda.dto.CityDTO;
-import org.com.sda.service.CityService;
+import org.com.sda.logic.service.CityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PutMapping;

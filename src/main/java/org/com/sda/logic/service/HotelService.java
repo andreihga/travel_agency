@@ -1,7 +1,8 @@
-package org.com.sda.service;
+package org.com.sda.logic.service;
 
 import org.com.sda.dto.HotelDTO;
 import org.com.sda.entity.Hotel;
+import org.com.sda.logic.service.CityService;
 import org.com.sda.repository.HotelDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

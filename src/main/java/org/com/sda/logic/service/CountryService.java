@@ -1,12 +1,8 @@
-package org.com.sda.service;
+package org.com.sda.logic.service;
 
-import org.com.sda.dto.CityDTO;
-import org.com.sda.dto.ContinentDTO;
 import org.com.sda.dto.CountryDTO;
-import org.com.sda.entity.City;
-import org.com.sda.entity.Continent;
 import org.com.sda.entity.Country;
-import org.com.sda.repository.ContinentDAO;
+import org.com.sda.logic.service.ContinentService;
 import org.com.sda.repository.CountryDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,7 +1,7 @@
 package org.com.sda.rest;
 
 import org.com.sda.dto.UserDTO;
-import org.com.sda.service.UserService;
+import org.com.sda.logic.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
