@@ -36,4 +36,5 @@ public class TripController {
 
         return new ResponseEntity(tripDetailsService.buyTrip(tripDetailsDTO), HttpStatus.OK);
     }
+//    @GetMapping("/sortTripByPrice")
 }

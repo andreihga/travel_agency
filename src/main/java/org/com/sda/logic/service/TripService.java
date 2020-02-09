@@ -8,6 +8,7 @@ import org.com.sda.entity.Trip;
 import org.com.sda.logic.service.CityService;
 import org.com.sda.logic.service.FlightService;
 import org.com.sda.logic.service.HotelService;
+import org.com.sda.repository.RoomAvailabilityDAO;
 import org.com.sda.repository.TripDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -25,6 +26,8 @@ public class TripService {
     private TripDAO tripDAO;
     @Autowired
     private CityService cityService;
+    @Autowired
+    private RoomAvailabilityDAO roomAvailabilityDAO;
 
 //    we convert tripDTO received from frontEnd into Trip, and then we will call the method from TripDAO to insert a trip into DB
 
@@ -37,6 +40,14 @@ public class TripService {
         trip.setReturnDateHotel(tripDTO.getReturnDateHotel());
         trip.setPromoted(tripDTO.isPromoted());
         tripDAO.addTrip(trip);
+    }
+
+    public Trip findTrip(TripDTO tripDTO) {
+        Trip trip = new Trip();
+        trip.setDepartureFlightTrip(flightService.getFlightsByFlightDTO(tripDTO.getDepartureFlightTripDTO()));
+        trip.setReturnFlightTrip(flightService.getFlightsByFlightDTO(tripDTO.getReturnFlightTripDTO()));
+        trip.setHotelTrip(hotelService.getHotelByHotelDTO(tripDTO.getHotelTripDTO()));
+        return tripDAO.findTrip(trip);
     }
 
     public List<Trip> getListOfTripsBySearchCriteria(TripDTO tripDTO) {
@@ -54,11 +65,11 @@ public class TripService {
             hotel = hotelService.getHotelByHotelDTO(tripDTO.getHotelTripDTO());
             city = hotel.getCity();
             trip.setHotelTrip(hotel);
-        } catch (NoResultException ex){
+        } catch (NoResultException ex) {
             System.out.println("No hotel found!");
             city = cityService.getCityFromCityDTO(tripDTO.getHotelTripDTO().getCityDTO());
         }
-        return tripDAO.searchTrip(trip,city);
+        return tripDAO.searchTrip(trip, city);
     }
 
     public List<TripDTO> searchTrip(TripDTO tripDTO) {
@@ -83,11 +94,4 @@ public class TripService {
         return tripDTOList;
     }
 
-    public Trip findTrip(TripDTO tripDTO){
-        Trip trip = new Trip();
-        trip.setDepartureFlightTrip(flightService.getFlightsByFlightDTO(tripDTO.getDepartureFlightTripDTO()));
-        trip.setReturnFlightTrip(flightService.getFlightsByFlightDTO(tripDTO.getReturnFlightTripDTO()));
-        trip.setHotelTrip(hotelService.getHotelByHotelDTO(tripDTO.getHotelTripDTO()));
-        return tripDAO.findTrip(trip);
-    }
 }

@@ -89,6 +89,28 @@ public class RoomAvailability {
         this.priceSingleRoom = priceSingleRoom;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        RoomAvailability that = (RoomAvailability) o;
+        return room_id == that.room_id &&
+                numberSingleRoomsAvailable == that.numberSingleRoomsAvailable &&
+                numberDoubleRoomsAvailable == that.numberDoubleRoomsAvailable &&
+                numberOfExtraBedsAvailable == that.numberOfExtraBedsAvailable &&
+                Double.compare(that.priceSingleRoom, priceSingleRoom) == 0 &&
+                Double.compare(that.priceDoubleRoom, priceDoubleRoom) == 0 &&
+                Double.compare(that.priceExtraBed, priceExtraBed) == 0 &&
+                Objects.equals(fromDate, that.fromDate) &&
+                Objects.equals(toDate, that.toDate) &&
+                Objects.equals(hotel, that.hotel);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(room_id, fromDate, toDate, numberSingleRoomsAvailable, numberDoubleRoomsAvailable, numberOfExtraBedsAvailable, priceSingleRoom, priceDoubleRoom, priceExtraBed, hotel);
+    }
+
     public double getPriceDoubleRoom() {
         return priceDoubleRoom;
     }

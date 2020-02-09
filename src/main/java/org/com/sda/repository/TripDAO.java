@@ -50,4 +50,13 @@ public class TripDAO {
         return trip1;
     }
 
+//    public Trip sortTripsByPrice(){
+//        Session session = HibernateUtil.getSession();
+//        Transaction transaction = session.beginTransaction();
+//
+//        Query query = session.createNamedQuery("sortTripsByPrice");
+//
+//        transaction.commit();
+//        session.close();
+//    }
 }
