@@ -4,8 +4,9 @@ import javax.persistence.*;
 import java.util.Date;
 import java.util.Objects;
 @NamedQueries({
-        @NamedQuery(name = "getRoomAvailability", query = "select r from RoomAvailability r where r.fromDate=:fromDate and r.toDate=:toDate and r.hotel=:hotel"),
-        @NamedQuery(name = "updateRooms", query = "update RoomAvailability as r set r.numberSingleRoomsAvailable=:updateSingleRooms,r.numberDoubleRoomsAvailable=:updateDoubleRooms,r.numberOfExtraBedsAvailable=:updateExtraBeds where r.hotel =:hotel")
+        @NamedQuery(name = "getRoomAvailability", query = "select r from RoomAvailability r where r.fromDate=:fromDate and r.toDate=:toDate and r.hotel.hotelName=:hotel"),
+        @NamedQuery(name = "updateRooms", query = "update RoomAvailability as r set r.numberSingleRoomsAvailable=:updateSingleRooms,r.numberDoubleRoomsAvailable=:updateDoubleRooms,r.numberOfExtraBedsAvailable=:updateExtraBeds where r.hotel =:hotel"),
+        @NamedQuery(name = "getRoomsByHotel",query = "select r from RoomAvailability r where r.hotel=:hotel")
 })
 @Entity
 @Table(name = "rooms")

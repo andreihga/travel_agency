@@ -1,7 +1,7 @@
 package org.com.sda.entity;
 
 import javax.persistence.*;
-import java.util.Date;
+import java.sql.Date;
 
 @NamedQueries({
         @NamedQuery(name = "searchTrip", query = "select t from Trip t where (:departureFlight = null or t.departureFlightTrip=:departureFlight)" +
@@ -9,6 +9,7 @@ import java.util.Date;
                 " and (:city = null or t.hotelTrip.city=:city)" +
                 " and (:toHotel = null or t.hotelTrip=:toHotel)"),
         @NamedQuery(name = "findTrip", query = "select t from Trip t where departureFlightTrip=:departureDate and returnFlightTrip=:returnDate and hotelTrip =:hotel"),
+        @NamedQuery(name = "getPromotedTrips", query = "select t from Trip t where t.isPromoted=:isPromoted")
 
 })
 @Entity
@@ -35,6 +36,18 @@ public class Trip {
     private Date returnDateHotel;
     @Column(name = "promoted")
     private boolean isPromoted;
+
+    @Override
+    public String toString() {
+        return "Trip{" +
+                "departureFlightTrip=" + departureFlightTrip +
+                ", returnFlightTrip=" + returnFlightTrip +
+                ", hotelTrip=" + hotelTrip +
+                ", departureDateHotel=" + departureDateHotel +
+                ", returnDateHotel=" + returnDateHotel +
+                ", isPromoted=" + isPromoted +
+                '}';
+    }
 
     public Flight getDepartureFlightTrip() {
         return departureFlightTrip;
