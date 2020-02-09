@@ -2,23 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="097d7646-a8d4-4ac3-b6bf-cf46836a731b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sda/dto/RoomDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sda/dto/RoomDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sda/entity/Hotel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sda/entity/Hotel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sda/entity/RoomAvailability.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sda/entity/RoomAvailability.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sda/entity/Trip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sda/entity/Trip.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sda/logic/service/TripService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sda/logic/service/TripService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sda/repository/RoomAvailabilityDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sda/repository/RoomAvailabilityDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sda/repository/TripDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sda/repository/TripDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sda/rest/TripController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sda/rest/TripController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/com/sda/dto/RoomDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/com/sda/dto/RoomDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/com/sda/dto/TripDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/com/sda/dto/TripDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/com/sda/entity/Hotel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/com/sda/entity/Hotel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/com/sda/entity/RoomAvailability.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/com/sda/entity/RoomAvailability.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/com/sda/entity/Trip.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/com/sda/entity/Trip.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/com/sda/repository/RoomAvailabilityDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/com/sda/repository/RoomAvailabilityDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/com/sda/repository/TripDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/com/sda/repository/TripDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/com/sda/rest/TripController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/com/sda/rest/TripController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sda/dto/AirportDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sda/dto/AirportDTO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +49,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="TestBranch" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -128,6 +112,9 @@
       <list>
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.App" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.App" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -314,11 +301,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="672" y="235" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580925321024" />
-    <state x="184" y="0" key="SettingsEditor" timestamp="1581252524934">
+    <state x="184" y="0" key="SettingsEditor" timestamp="1581256220235">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="184" y="12" key="SettingsEditor/0.0.1366.738/1366.0.1920.1050@0.0.1366.738" timestamp="1580217306961" />
-    <state x="184" y="0" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1581252524934" />
+    <state x="184" y="0" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1581256220235" />
     <state x="362" y="86" key="Vcs.Push.Dialog.v2" timestamp="1581243108095">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -328,10 +315,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="818" y="266" key="com.intellij.database.view.ui.DbObjectDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580775834322" />
-    <state x="379" y="194" key="com.intellij.ide.util.TipDialog" timestamp="1581239517212">
+    <state x="379" y="194" key="com.intellij.ide.util.TipDialog" timestamp="1581256257191">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="379" y="194" key="com.intellij.ide.util.TipDialog/0.0.1366.738@0.0.1366.738" timestamp="1581239517212" />
+    <state x="379" y="194" key="com.intellij.ide.util.TipDialog/0.0.1366.738@0.0.1366.738" timestamp="1581256257191" />
     <state x="533" y="273" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581196214338" />
     <state x="690" y="275" key="extract.method.dialog" timestamp="1580820881600">
       <screen x="0" y="0" width="1920" height="1040" />

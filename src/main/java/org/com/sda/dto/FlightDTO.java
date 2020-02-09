@@ -1,9 +1,14 @@
 package org.com.sda.dto;
 
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import java.sql.Date;
 
 public class FlightDTO {
+    @NotNull
+    @NotEmpty
     private String flightNumber;
+
     private Date departureDate;
     private int totalNumberOfSeats;
     private int availableSeats;
