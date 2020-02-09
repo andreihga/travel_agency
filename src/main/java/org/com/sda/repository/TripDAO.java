@@ -12,7 +12,7 @@ import java.util.List;
 
 @Repository
 public class TripDAO {
-    public void addTrip(Trip trip){
+    public void addTrip(Trip trip) {
         Session session = HibernateUtil.getSession();
         Transaction transaction = session.beginTransaction();
         session.persist(trip);
@@ -20,7 +20,7 @@ public class TripDAO {
         session.close();
     }
 
-    public List<Trip> searchTrip(Trip trip, City city){
+    public List<Trip> searchTrip(Trip trip, City city) {
         Session session = HibernateUtil.getSession();
         Transaction transaction = session.beginTransaction();
 
@@ -28,7 +28,7 @@ public class TripDAO {
         query.setParameter("departureFlight", trip.getDepartureFlightTrip());
         query.setParameter("returnFlightId", trip.getReturnFlightTrip());
         query.setParameter("city", city);
-        query.setParameter("toHotel",trip.getHotelTrip());
+        query.setParameter("toHotel", trip.getHotelTrip());
         List<Trip> tripList = query.getResultList();
 
         transaction.commit();
@@ -37,26 +37,28 @@ public class TripDAO {
         return tripList;
     }
 
-    public Trip findTrip(Trip trip){
+    public Trip findTrip(Trip trip) {
         Session session = HibernateUtil.getSession();
         Transaction transaction = session.beginTransaction();
         Query query = session.createNamedQuery("findTrip");
-        query.setParameter("departureDate",trip.getDepartureFlightTrip());
-        query.setParameter("returnDate",trip.getReturnFlightTrip());
+        query.setParameter("departureDate", trip.getDepartureFlightTrip());
+        query.setParameter("returnDate", trip.getReturnFlightTrip());
         query.setParameter("hotel", trip.getHotelTrip());
-        Trip trip1 = (Trip)query.getSingleResult();
+        Trip trip1 = (Trip) query.getSingleResult();
         transaction.commit();
         session.close();
         return trip1;
     }
 
-//    public Trip sortTripsByPrice(){
-//        Session session = HibernateUtil.getSession();
-//        Transaction transaction = session.beginTransaction();
-//
-//        Query query = session.createNamedQuery("sortTripsByPrice");
-//
-//        transaction.commit();
-//        session.close();
-//    }
+    public List<Trip> getPromotedTrips(boolean isPromoted) {
+        Session session = HibernateUtil.getSession();
+        Transaction transaction = session.beginTransaction();
+
+        Query query = session.createNamedQuery("getPromotedTrips");
+        query.setParameter("isPromoted", isPromoted);
+        List<Trip> listOfPromotedTrips = query.getResultList();
+        transaction.commit();
+        session.close();
+        return listOfPromotedTrips;
+    }
 }

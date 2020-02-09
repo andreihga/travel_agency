@@ -93,5 +93,45 @@ public class TripService {
         }
         return tripDTOList;
     }
+    public List<TripDTO> getPromotedTrips(boolean isPromoted){
+        List<Trip> tripList = tripDAO.getPromotedTrips(isPromoted);
+        List<TripDTO> tripDTOList = new LinkedList<>();
+        for (Trip t : tripList) {
+            TripDTO tripDTO = new TripDTO();
+            tripDTO.setDepartureFlightTripDTO(flightService.getFlightDTOFromFlight(t.getDepartureFlightTrip()));
+            tripDTO.setReturnFlightTripDTO(flightService.getFlightDTOFromFlight(t.getReturnFlightTrip()));
+            tripDTO.setHotelTripDTO(hotelService.getHotelDTOfromHotel(t.getHotelTrip()));
+            tripDTO.setDepartureDateHotel(t.getDepartureDateHotel());
+            tripDTO.setReturnDateHotel(t.getReturnDateHotel());
+            tripDTO.setNrOfPersons(1);
+            tripDTO.setPromoted(t.isPromoted());
+            RoomAvailability room = roomAvailabilityDAO.seeAvailability(t);
 
+
+            tripDTO.setNrExtraBeds(room.getNumberOfExtraBedsAvailable());
+            tripDTOList.add(tripDTO);
+        }
+        return tripDTOList;
+    }
+
+//    public List<TripDTO> searchTripByPrice(TripDTO tripDTO) {
+//        double smth;
+//        List<TripDTO> tripDTOList = searchTrip(tripDTO);
+//        List<TripDTO> tripDTOList1 = new LinkedList<>();
+//        for (TripDTO t : tripDTOList) {
+//            double departureFlightPrice = t.getDepartureFlightTripDTO().getFlightPrice() * tripDTO.getNrOfPersons();
+//            double returnFlightPrice = t.getReturnFlightTripDTO().getFlightPrice() * tripDTO.getNrOfPersons();
+//            RoomAvailability r = roomAvailabilityDAO.seeAvailability(findTrip(t));
+//            smth = departureFlightPrice + returnFlightPrice + (r.getPriceDoubleRoom() * t.getNrDoubleRooms())
+//                    + (r.getPriceSingleRoom() * t.getNrSingleRooms()) + (r.getPriceExtraBed() * t.getNrExtraBeds());
+//            t.setPricePerTripBySearchCriteria(smth);
+//            tripDTOList1.add(t);
+//        }
+////        compareTo()
+//    }
+
+//    @Override
+//    public int compareTo(TripDTO o) {
+//        return ;
+//    }
 }

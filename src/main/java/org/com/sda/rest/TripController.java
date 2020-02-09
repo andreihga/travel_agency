@@ -36,5 +36,14 @@ public class TripController {
 
         return new ResponseEntity(tripDetailsService.buyTrip(tripDetailsDTO), HttpStatus.OK);
     }
+    @GetMapping("/getPromotedTrips/{isPromoted}")
+    private ResponseEntity getPromotedTrips(@PathVariable boolean isPromoted){
+        List<TripDTO> tripDTOList = tripService.getPromotedTrips(isPromoted);
+        if (tripDTOList!=null){
+            return new ResponseEntity(tripDTOList,HttpStatus.OK);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
 //    @GetMapping("/sortTripByPrice")
 }

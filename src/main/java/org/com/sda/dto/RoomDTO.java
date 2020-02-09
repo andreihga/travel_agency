@@ -5,6 +5,7 @@ import java.util.Date;
 public class RoomDTO {
     private Date fromDate;
     private Date toDate;
+
     private int nrOfAvailableSingleRooms;
     private int nrOfAvailableDoubleRooms;
     private int numberOfExtraBedsAvailable;
