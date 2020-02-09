@@ -2,10 +2,14 @@ package org.com.sda.dto;
 
 import org.com.sda.entity.Country;
 
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+
 public class CityDTO {
-
+    @NotNull
+    @NotEmpty
     private String cityName;
-
+    @NotNull @NotEmpty
     private CountryDTO countryDTO;
 
     public String getCityName() {

@@ -1,13 +1,17 @@
 package org.com.sda.dto;
 
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+
 public class UserDTO {
-
+    @NotNull @NotEmpty
     private String firstName;
-
+    @NotNull @NotEmpty
     private String lastName;
-
+    @NotNull @NotEmpty
     private String password;
-
+    @NotNull @NotEmpty @Email
     private String email;
 
     public String getFirstName() {
