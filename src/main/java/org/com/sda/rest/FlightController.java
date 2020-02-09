@@ -1,7 +1,7 @@
 package org.com.sda.rest;
 
 import org.com.sda.dto.FlightDTO;
-import org.com.sda.service.FlightService;
+import org.com.sda.logic.service.FlightService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PutMapping;

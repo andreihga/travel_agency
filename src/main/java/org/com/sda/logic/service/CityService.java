@@ -1,4 +1,4 @@
-package org.com.sda.service;
+package org.com.sda.logic.service;
 
 import org.com.sda.dto.CityDTO;
 import org.com.sda.entity.City;

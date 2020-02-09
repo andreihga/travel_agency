@@ -9,9 +9,19 @@ public class TripDTO {
     private Date departureDateHotel;
     private Date returnDateHotel;
     private boolean isPromoted;
-    private int nrOfPersons;
+    private int nrOfPersons = 1;
+    private int nrSingleRooms = 1;
     private int nrDoubleRooms;
-    private int nrSingleRooms;
+    private int nrExtraBeds;
+    private double pricePerTripBySearchCriteria;
+
+    public double getPricePerTripBySearchCriteria() {
+        return pricePerTripBySearchCriteria;
+    }
+
+    public void setPricePerTripBySearchCriteria(double pricePerTripBySearchCriteria) {
+        this.pricePerTripBySearchCriteria = pricePerTripBySearchCriteria;
+    }
 
     public int getNrDoubleRooms() {
         return nrDoubleRooms;
@@ -36,10 +46,6 @@ public class TripDTO {
     public void setNrExtraBeds(int nrExtraBeds) {
         this.nrExtraBeds = nrExtraBeds;
     }
-
-    private int nrExtraBeds;
-
-
 
     public int getNrOfPersons() {
         return nrOfPersons;

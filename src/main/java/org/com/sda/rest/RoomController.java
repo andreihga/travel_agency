@@ -1,7 +1,7 @@
 package org.com.sda.rest;
 
 import org.com.sda.dto.RoomDTO;
-import org.com.sda.service.RoomAvailabilityService;
+import org.com.sda.logic.service.RoomAvailabilityService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

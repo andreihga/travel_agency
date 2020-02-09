@@ -1,4 +1,4 @@
-package org.com.sda.service;
+package org.com.sda.logic.service;
 
 import org.com.sda.Exceptions.RoomsUnavailable;
 import org.com.sda.Exceptions.SeatsUnavailable;
@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 
 import java.sql.Timestamp;
 import java.util.Date;
+import java.util.List;
 
 @Service
 public class TripDetailsService {
@@ -47,7 +48,7 @@ public class TripDetailsService {
         tripDetails.setExtraBed(tripDetailsDTO.getExtraBed());
         Double totalPriceHotel = roomAvailabilityService.totalRoomsPrice(trip, tripDetailsDTO.getSingleRooms(), tripDetailsDTO.getDoubleRooms(), tripDetailsDTO.getExtraBed());
         Double totalPriceFlight = flightService.flightPrice(trip, tripDetailsDTO.getNrOfPersons());
-        Double totalPrice = totalPriceFlight + totalPriceHotel;
+        double totalPrice = totalPriceFlight + totalPriceHotel;
         Double discountedPrice = applyDiscount(totalPrice, user.getTotalAmount());
         tripDetails.setAmount(discountedPrice);
         Date date = new Date();
@@ -66,4 +67,5 @@ public class TripDetailsService {
         } else
             return totalPrice - (totalPrice * 20 / 100);
     }
+
 }

@@ -1,9 +1,11 @@
-package org.com.sda.service;
+package org.com.sda.logic.service;
 
 import org.com.sda.Exceptions.RoomsUnavailable;
 import org.com.sda.dto.RoomDTO;
 import org.com.sda.entity.RoomAvailability;
 import org.com.sda.entity.Trip;
+import org.com.sda.logic.consts.Consts;
+import org.com.sda.logic.service.HotelService;
 import org.com.sda.repository.RoomAvailabilityDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -37,7 +39,7 @@ public class RoomAvailabilityService {
                 roomsAvailability.getNumberOfExtraBedsAvailable() >= extraBed) {
             return;
         }
-        throw new RoomsUnavailable("No rooms available");
+        throw new RoomsUnavailable(Consts.NO_AVAILABLE_ROOMS);
     }
 
     public Double totalRoomsPrice(Trip trip, int singleRoom, int doubleRoom, int extraBed) {

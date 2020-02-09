@@ -1,8 +1,7 @@
 package org.com.sda.rest;
 
 import org.com.sda.dto.AirportDTO;
-import org.com.sda.entity.Airport;
-import org.com.sda.service.AirportService;
+import org.com.sda.logic.service.AirportService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

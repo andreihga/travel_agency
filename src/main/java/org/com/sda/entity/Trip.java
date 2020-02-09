@@ -8,7 +8,8 @@ import java.util.Date;
                 " and (:returnFlightId= null or t.returnFlightTrip =:returnFlightId)" +
                 " and (:city = null or t.hotelTrip.city=:city)" +
                 " and (:toHotel = null or t.hotelTrip=:toHotel)"),
-        @NamedQuery(name = "findTrip", query = "select t from Trip t where departureFlightTrip=:departureDate and returnFlightTrip=:returnDate and hotelTrip =:hotel")
+        @NamedQuery(name = "findTrip", query = "select t from Trip t where departureFlightTrip=:departureDate and returnFlightTrip=:returnDate and hotelTrip =:hotel"),
+
 })
 @Entity
 @Table(name = "trips")

@@ -5,7 +5,6 @@ import org.com.sda.entity.Flight;
 import org.com.sda.entity.RoomAvailability;
 import org.com.sda.entity.TripDetails;
 import org.com.sda.entity.User;
-import org.com.sda.service.FlightService;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
