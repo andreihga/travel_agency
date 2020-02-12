@@ -11,7 +11,8 @@ import java.sql.Date;
         @NamedQuery(name = "findTrip", query = "select t from Trip t where departureFlightTrip=:departureDate and returnFlightTrip=:returnDate and hotelTrip =:hotel"),
         @NamedQuery(name = "getPromotedTrips", query = "select t from Trip t where t.isPromoted=:isPromoted"),
         @NamedQuery(name = "upcomingTripsGlobally", query = "select t from Trip t where departureFlightTrip.departureDate > :currentDate"),
-        @NamedQuery(name = "upcomingTripsByContinent", query = "select t from Trip t where departureFlightTrip.airport.city.country.continent.continent_name = :continent")
+        @NamedQuery(name = "upcomingTripsByContinent", query = "select t from Trip t where departureFlightTrip.airport.city.country.continent.continent_name = :continent"),
+        @NamedQuery(name = "upcomingTripsByCountry", query = "select t from Trip t where returnFlightTrip.airport.city.country.countryName = :country")
 
 })
 @Entity
