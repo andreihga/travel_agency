@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="097d7646-a8d4-4ac3-b6bf-cf46836a731b" name="Default Changelist" comment="">
+    <list default="true" id="097d7646-a8d4-4ac3-b6bf-cf46836a731b" name="Default Changelist" comment="- created upcomingTripsByCountry functionality">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sda/entity/Trip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sda/entity/Trip.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sda/logic/service/TripService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sda/logic/service/TripService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sda/repository/TripDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sda/repository/TripDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sda/rest/TripController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sda/rest/TripController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sda/runner/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sda/runner/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/com/sda/entity/Trip.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/com/sda/entity/Trip.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/com/sda/repository/TripDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/com/sda/repository/TripDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/com/sda/rest/TripController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/com/sda/rest/TripController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/com/sda/dto/AirportDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/com/sda/dto/AirportDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/com/sda/dto/CityDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/com/sda/dto/CityDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/com/sda/dto/ContinentDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/com/sda/dto/ContinentDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/com/sda/dto/CountryDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/com/sda/dto/CountryDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/com/sda/dto/FlightDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/com/sda/dto/FlightDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/com/sda/dto/UserDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/com/sda/dto/UserDTO.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581500455342</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="- created upcomingTripsByCountry functionality">
+      <created>1581515319528</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1581515319528</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,7 +214,8 @@
     <MESSAGE value="- created a new package [logic]&#10;- in logic I'll have service included and some others that will help me in the 'program's logic'" />
     <MESSAGE value="- empty commit" />
     <MESSAGE value="- started working on home page functionalities" />
-    <option name="LAST_COMMIT_MESSAGE" value="- started working on home page functionalities" />
+    <MESSAGE value="- created upcomingTripsByCountry functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="- created upcomingTripsByCountry functionality" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="28" key="#Assign_Data_Sources" timestamp="1579989246068">
@@ -254,10 +260,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="413" y="117" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.738@0.0.1366.738" timestamp="1581153148553" />
-    <state x="320" y="0" key="CommitChangelistDialog2" timestamp="1581500453748">
+    <state x="320" y="0" key="CommitChangelistDialog2" timestamp="1581515318573">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="320" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1581500453748" />
+    <state x="320" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1581515318573" />
     <state x="520" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1580925266437" />
     <state x="129" y="62" key="DiffContextDialog" timestamp="1581513913498">
       <screen x="0" y="0" width="1366" height="738" />
@@ -327,10 +333,10 @@
     </state>
     <state x="184" y="12" key="SettingsEditor/0.0.1366.738/1366.0.1920.1050@0.0.1366.738" timestamp="1580217306961" />
     <state x="184" y="0" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1581256220235" />
-    <state x="362" y="86" key="Vcs.Push.Dialog.v2" timestamp="1581243108095">
+    <state x="362" y="86" key="Vcs.Push.Dialog.v2" timestamp="1581515437266">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="362" y="86" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1581243108095" />
+    <state x="362" y="86" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1581515437266" />
     <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1580925283055" />
     <state x="818" y="266" key="com.intellij.database.view.ui.DbObjectDialog" timestamp="1580775834322">
       <screen x="0" y="0" width="1920" height="1040" />
