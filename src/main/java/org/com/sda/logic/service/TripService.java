@@ -96,6 +96,12 @@ public class TripService {
     public List<TripDTO> getPromotedTrips(boolean isPromoted){
         List<Trip> tripList = tripDAO.getPromotedTrips(isPromoted);
         List<TripDTO> tripDTOList = new LinkedList<>();
+        List<TripDTO> tripDTOList1 = getTripDTOS(tripList,tripDTOList);
+        return tripDTOList;
+    }
+
+    private List<TripDTO> getTripDTOS(List<Trip> tripList,List<TripDTO> tripDTOList) {
+
         for (Trip t : tripList) {
             TripDTO tripDTO = new TripDTO();
             tripDTO.setDepartureFlightTripDTO(flightService.getFlightDTOFromFlight(t.getDepartureFlightTrip()));
@@ -106,12 +112,18 @@ public class TripService {
             tripDTO.setNrOfPersons(1);
             tripDTO.setPromoted(t.isPromoted());
             RoomAvailability room = roomAvailabilityDAO.seeAvailability(t);
-
-
             tripDTO.setNrExtraBeds(room.getNumberOfExtraBedsAvailable());
             tripDTOList.add(tripDTO);
         }
         return tripDTOList;
+    }
+
+    public List<TripDTO> upcomingTripsGlobally(){
+        List<Trip> tripList = tripDAO.upcomingTripsGlobally();
+        List<TripDTO> tripDTOList = new LinkedList<>();
+        List<TripDTO> tripDTOList1 = getTripDTOS(tripList,tripDTOList);
+
+        return tripDTOList1;
     }
 
 //    public List<TripDTO> searchTripByPrice(TripDTO tripDTO) {
