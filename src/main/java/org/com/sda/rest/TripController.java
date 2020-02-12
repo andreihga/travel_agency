@@ -20,37 +20,47 @@ public class TripController {
     private TripDetailsService tripDetailsService;
 
     @PutMapping("/addTrip")
-    private ResponseEntity addTrip(@RequestBody TripDTO tripDTO){
+    private ResponseEntity addTrip(@RequestBody TripDTO tripDTO) {
         tripService.insertTrip(tripDTO);
         return ResponseEntity.ok().build();
     }
 
     @GetMapping("/searchTrip")
-    private List<TripDTO> searchTrip(@RequestBody TripDTO tripDTO){
+    private List<TripDTO> searchTrip(@RequestBody TripDTO tripDTO) {
         List<TripDTO> tripDTOList = tripService.searchTrip(tripDTO);
 
         return ResponseEntity.ok(tripDTOList).getBody();
     }
-    @PostMapping("/buyTrip")
-    private ResponseEntity buyTrip(@RequestBody TripDetailsDTO tripDetailsDTO){
 
-        return new ResponseEntity(tripDetailsService.buyTrip(tripDetailsDTO), HttpStatus.OK);
+    @PostMapping("/buyTrip")
+    private ResponseEntity<String> buyTrip(@RequestBody TripDetailsDTO tripDetailsDTO) {
+
+        return new ResponseEntity<>(tripDetailsService.buyTrip(tripDetailsDTO), HttpStatus.OK);
     }
+
     @GetMapping("/getPromotedTrips/{isPromoted}")
-    private ResponseEntity getPromotedTrips(@PathVariable boolean isPromoted){
+    private ResponseEntity<List<TripDTO>> getPromotedTrips(@PathVariable boolean isPromoted) {
         List<TripDTO> tripDTOList = tripService.getPromotedTrips(isPromoted);
-        if (tripDTOList!=null){
-            return new ResponseEntity(tripDTOList,HttpStatus.OK);
+        if (tripDTOList != null) {
+            return new ResponseEntity<>(tripDTOList, HttpStatus.OK);
         } else {
             return ResponseEntity.notFound().build();
         }
     }
 
     @GetMapping("/upcomingTripsGlobally")
-    private ResponseEntity upcomingTripsGlobally(){
+    private ResponseEntity<List<TripDTO>> upcomingTripsGlobally() {
         List<TripDTO> listOfUpcomingTripsGlobally = tripService.upcomingTripsGlobally();
-        if(listOfUpcomingTripsGlobally.size() != 0 ){
-            return new ResponseEntity(listOfUpcomingTripsGlobally,HttpStatus.OK);
+        if (listOfUpcomingTripsGlobally.size() != 0) {
+            return new ResponseEntity<>(listOfUpcomingTripsGlobally, HttpStatus.OK);
+        } else return ResponseEntity.noContent().build();
+    }
+
+    @GetMapping("/upcomingTripsByContinent/{continent}")
+    private ResponseEntity<List<TripDTO>> upcomingTripsByContinent(@PathVariable String continent) {
+        List<TripDTO> tripDTOList = tripService.upcomingTripsByContinent(continent);
+        if (tripDTOList.size() != 0){
+            return new ResponseEntity<>(tripDTOList,HttpStatus.OK);
         } else return ResponseEntity.noContent().build();
     }
 //    @GetMapping("/sortTripByPrice")
