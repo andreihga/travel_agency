@@ -88,4 +88,15 @@ public class TripDAO {
         session.close();
         return tripList;
     }
+
+    public List<Trip> upcomingTripsByCountry(String country) {
+        Session session = HibernateUtil.getSession();
+        Transaction transaction = session.beginTransaction();
+        Query query = session.createNamedQuery("upcomingTripsByCountry");
+        query.setParameter("country", country);
+        List<Trip> tripList = query.getResultList();
+        transaction.commit();
+        session.close();
+        return tripList;
+    }
 }

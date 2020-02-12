@@ -44,6 +44,7 @@ public class TripController {
         if (tripDTOList != null) {
             return new ResponseEntity<>(tripDTOList, HttpStatus.OK);
         } else {
+
             return ResponseEntity.notFound().build();
         }
     }
@@ -61,6 +62,13 @@ public class TripController {
         List<TripDTO> tripDTOList = tripService.upcomingTripsByContinent(continent);
         if (tripDTOList.size() != 0){
             return new ResponseEntity<>(tripDTOList,HttpStatus.OK);
+        } else return ResponseEntity.noContent().build();
+    }
+    @GetMapping("/upcomingTripsByCountry/{country}")
+    private ResponseEntity<List<TripDTO>> upcomingTripsByCountry(@PathVariable String country){
+        List<TripDTO> tripDTOList = tripService.upcomingTripsByCountry(country);
+        if (tripDTOList.size() != 0){
+            return new ResponseEntity(tripDTOList,HttpStatus.OK);
         } else return ResponseEntity.noContent().build();
     }
 //    @GetMapping("/sortTripByPrice")

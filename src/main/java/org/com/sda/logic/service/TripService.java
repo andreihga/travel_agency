@@ -131,6 +131,11 @@ public class TripService {
         List<TripDTO> tripDTOList = new LinkedList<>();
         return getTripDTOS(tripList,tripDTOList);
     }
+    public List<TripDTO> upcomingTripsByCountry(String country){
+        List<Trip> tripList= tripDAO.upcomingTripsByCountry(country);
+        List<TripDTO> tripDTOList = new LinkedList<>();
+        return getTripDTOS(tripList,tripDTOList);
+    }
 
 //    public List<TripDTO> searchTripByPrice(TripDTO tripDTO) {
 //        double smth;
