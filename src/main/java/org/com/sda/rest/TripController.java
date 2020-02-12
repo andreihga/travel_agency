@@ -45,5 +45,13 @@ public class TripController {
             return ResponseEntity.notFound().build();
         }
     }
+
+    @GetMapping("/upcomingTripsGlobally")
+    private ResponseEntity upcomingTripsGlobally(){
+        List<TripDTO> listOfUpcomingTripsGlobally = tripService.upcomingTripsGlobally();
+        if(listOfUpcomingTripsGlobally.size() != 0 ){
+            return new ResponseEntity(listOfUpcomingTripsGlobally,HttpStatus.OK);
+        } else return ResponseEntity.noContent().build();
+    }
 //    @GetMapping("/sortTripByPrice")
 }
