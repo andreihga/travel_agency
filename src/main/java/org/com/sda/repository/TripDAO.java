@@ -77,4 +77,15 @@ public class TripDAO {
         session.close();
         return tripList;
     }
+
+    public List<Trip> upcomingTripsByContinent(String continent) {
+        Session session = HibernateUtil.getSession();
+        Transaction transaction = session.beginTransaction();
+        Query query = session.createNamedQuery("upcomingTripsByContinent");
+        query.setParameter("continent", continent);
+        List<Trip> tripList = query.getResultList();
+        transaction.commit();
+        session.close();
+        return tripList;
+    }
 }

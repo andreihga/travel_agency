@@ -93,14 +93,15 @@ public class TripService {
         }
         return tripDTOList;
     }
-    public List<TripDTO> getPromotedTrips(boolean isPromoted){
+
+    public List<TripDTO> getPromotedTrips(boolean isPromoted) {
         List<Trip> tripList = tripDAO.getPromotedTrips(isPromoted);
         List<TripDTO> tripDTOList = new LinkedList<>();
-        List<TripDTO> tripDTOList1 = getTripDTOS(tripList,tripDTOList);
+        List<TripDTO> tripDTOList1 = getTripDTOS(tripList, tripDTOList);
         return tripDTOList;
     }
 
-    private List<TripDTO> getTripDTOS(List<Trip> tripList,List<TripDTO> tripDTOList) {
+    private List<TripDTO> getTripDTOS(List<Trip> tripList, List<TripDTO> tripDTOList) {
 
         for (Trip t : tripList) {
             TripDTO tripDTO = new TripDTO();
@@ -118,12 +119,17 @@ public class TripService {
         return tripDTOList;
     }
 
-    public List<TripDTO> upcomingTripsGlobally(){
+    public List<TripDTO> upcomingTripsGlobally() {
         List<Trip> tripList = tripDAO.upcomingTripsGlobally();
         List<TripDTO> tripDTOList = new LinkedList<>();
-        List<TripDTO> tripDTOList1 = getTripDTOS(tripList,tripDTOList);
 
-        return tripDTOList1;
+        return getTripDTOS(tripList, tripDTOList);
+    }
+
+    public List<TripDTO> upcomingTripsByContinent(String continent) {
+        List<Trip> tripList = tripDAO.upcomingTripsByContinent(continent);
+        List<TripDTO> tripDTOList = new LinkedList<>();
+        return getTripDTOS(tripList,tripDTOList);
     }
 
 //    public List<TripDTO> searchTripByPrice(TripDTO tripDTO) {

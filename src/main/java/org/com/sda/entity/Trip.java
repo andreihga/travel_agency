@@ -10,7 +10,8 @@ import java.sql.Date;
                 " and (:toHotel = null or t.hotelTrip=:toHotel)"),
         @NamedQuery(name = "findTrip", query = "select t from Trip t where departureFlightTrip=:departureDate and returnFlightTrip=:returnDate and hotelTrip =:hotel"),
         @NamedQuery(name = "getPromotedTrips", query = "select t from Trip t where t.isPromoted=:isPromoted"),
-        @NamedQuery(name = "upcomingTripsGlobally", query = "select t from Trip t where departureFlightTrip.departureDate > :currentDate")
+        @NamedQuery(name = "upcomingTripsGlobally", query = "select t from Trip t where departureFlightTrip.departureDate > :currentDate"),
+        @NamedQuery(name = "upcomingTripsByContinent", query = "select t from Trip t where departureFlightTrip.airport.city.country.continent.continent_name = :continent")
 
 })
 @Entity
