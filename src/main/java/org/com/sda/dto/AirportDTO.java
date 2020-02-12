@@ -1,9 +1,15 @@
 package org.com.sda.dto;
 
-public class AirportDTO {
-    private String airportNameDTO;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.NotEmpty;
 
+public class AirportDTO {
+    @NotNull @NotEmpty
+    private String airportNameDTO;
+    
+    @NotNull @NotEmpty
     private CityDTO cityDTO;
+
 
     public String getAirportNameDTO() {
         return airportNameDTO;
