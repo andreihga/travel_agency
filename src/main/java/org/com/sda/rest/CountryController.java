@@ -1,9 +1,11 @@
 package org.com.sda.rest;
 
 import org.com.sda.dto.CountryDTO;
+import org.com.sda.logic.readers.CountryReader;
 import org.com.sda.logic.service.ContinentService;
 import org.com.sda.logic.service.CountryService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,7 +18,8 @@ public class CountryController {
     private CountryService countryService;
     @Autowired
     private ContinentService continentService;
-
+    @Autowired
+    private CountryReader countryReader;
 
     @GetMapping("/getCountries")
     public ResponseEntity countryDTOList(){
@@ -24,11 +27,16 @@ public class CountryController {
         return ResponseEntity.ok(countryDTOList);
     }
 
-    @PutMapping(value = "/addCountries", consumes = "application/json")
+    @PostMapping(value = "/addCountries", consumes = "application/json")
     public ResponseEntity addCountries(@RequestBody CountryDTO countryDTO){
         countryService.addCountries(countryDTO);
         return ResponseEntity.ok().build();
     }
 
+    @PostMapping(value = "/addCountriesViaExcel")
+    public ResponseEntity addCountriesViaExcel(){
+        countryReader.readCountryFromFile();
+        return ResponseEntity.ok().build();
+    }
 }
 

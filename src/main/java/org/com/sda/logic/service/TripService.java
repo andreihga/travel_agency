@@ -5,9 +5,6 @@ import org.com.sda.entity.City;
 import org.com.sda.entity.Hotel;
 import org.com.sda.entity.RoomAvailability;
 import org.com.sda.entity.Trip;
-import org.com.sda.logic.service.CityService;
-import org.com.sda.logic.service.FlightService;
-import org.com.sda.logic.service.HotelService;
 import org.com.sda.repository.RoomAvailabilityDAO;
 import org.com.sda.repository.TripDAO;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -137,6 +134,7 @@ public class TripService {
         return getTripDTOS(tripList,tripDTOList);
     }
 
+
 //    public List<TripDTO> searchTripByPrice(TripDTO tripDTO) {
 //        double smth;
 //        List<TripDTO> tripDTOList = searchTrip(tripDTO);
@@ -150,7 +148,7 @@ public class TripService {
 //            t.setPricePerTripBySearchCriteria(smth);
 //            tripDTOList1.add(t);
 //        }
-////        compareTo()
+//           compareTo()
 //    }
 
 //    @Override
