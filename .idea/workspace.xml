@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="097d7646-a8d4-4ac3-b6bf-cf46836a731b" name="Default Changelist" comment="- created upcomingTripsByCountry functionality">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/com/sda/dto/AirportDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/com/sda/dto/AirportDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/com/sda/dto/CityDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/com/sda/dto/CityDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/com/sda/dto/ContinentDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/com/sda/dto/ContinentDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/com/sda/dto/CountryDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/com/sda/dto/CountryDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/com/sda/dto/FlightDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/com/sda/dto/FlightDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/com/sda/dto/UserDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/com/sda/dto/UserDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sda/logic/service/ContinentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sda/logic/service/ContinentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sda/logic/service/TripService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sda/logic/service/TripService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +53,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="HomePageFunctionalities" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -167,6 +165,7 @@
       <workItem from="1581196213919" duration="937000" />
       <workItem from="1581239515517" duration="13228000" />
       <workItem from="1581499991587" duration="3449000" />
+      <workItem from="1581517466103" duration="7778000" />
     </task>
     <task id="LOCAL-00001" summary="- created logIn and signUp">
       <created>1580925268644</created>
@@ -260,10 +259,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="413" y="117" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.738@0.0.1366.738" timestamp="1581153148553" />
-    <state x="320" y="0" key="CommitChangelistDialog2" timestamp="1581515318573">
+    <state x="320" y="0" key="CommitChangelistDialog2" timestamp="1581596958858">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="320" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1581515318573" />
+    <state x="320" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1581596958858" />
     <state x="520" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1580925266437" />
     <state x="129" y="62" key="DiffContextDialog" timestamp="1581513913498">
       <screen x="0" y="0" width="1366" height="738" />
@@ -333,19 +332,19 @@
     </state>
     <state x="184" y="12" key="SettingsEditor/0.0.1366.738/1366.0.1920.1050@0.0.1366.738" timestamp="1580217306961" />
     <state x="184" y="0" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1581256220235" />
-    <state x="362" y="86" key="Vcs.Push.Dialog.v2" timestamp="1581515437266">
+    <state x="362" y="86" key="Vcs.Push.Dialog.v2" timestamp="1581515532283">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="362" y="86" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1581515437266" />
+    <state x="362" y="86" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1581515532283" />
     <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1580925283055" />
     <state x="818" y="266" key="com.intellij.database.view.ui.DbObjectDialog" timestamp="1580775834322">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="818" y="266" key="com.intellij.database.view.ui.DbObjectDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580775834322" />
-    <state x="379" y="194" key="com.intellij.ide.util.TipDialog" timestamp="1581500150665">
+    <state x="379" y="194" key="com.intellij.ide.util.TipDialog" timestamp="1581517467297">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="379" y="194" key="com.intellij.ide.util.TipDialog/0.0.1366.738@0.0.1366.738" timestamp="1581500150665" />
+    <state x="379" y="194" key="com.intellij.ide.util.TipDialog/0.0.1366.738@0.0.1366.738" timestamp="1581517467297" />
     <state x="533" y="273" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581196214338" />
     <state x="491" y="195" key="extract.method.dialog" timestamp="1581505032472">
       <screen x="0" y="0" width="1366" height="738" />
@@ -360,10 +359,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="393" y="161" key="git4idea.merge.GitPullDialog/0.0.1366.738@0.0.1366.738" timestamp="1581513924548" />
-    <state x="65" y="65" key="new project wizard" timestamp="1580337581825">
+    <state x="65" y="65" key="new project wizard" timestamp="1581586115639">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="65" y="65" key="new project wizard/0.0.1366.738@0.0.1366.738" timestamp="1580337581825" />
+    <state x="65" y="65" key="new project wizard/0.0.1366.738@0.0.1366.738" timestamp="1581586115639" />
     <state x="371" y="216" width="707" height="305" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1580217181162">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -372,11 +371,11 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="339" y="165" key="run.anything.popup/0.0.1366.738@0.0.1366.738" timestamp="1580504059121" />
-    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1580635028040">
+    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1581527701126">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="346" y="59" width="672" height="678" key="search.everywhere.popup/0.0.1366.738/1366.0.1280.690@0.0.1366.738" timestamp="1580565375891" />
-    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup/0.0.1366.738@0.0.1366.738" timestamp="1580635028040" />
+    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup/0.0.1366.738@0.0.1366.738" timestamp="1581527701126" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

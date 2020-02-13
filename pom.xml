@@ -43,6 +43,13 @@
             <artifactId>spring-boot-starter-web</artifactId>
             <version>2.2.1.RELEASE</version>
         </dependency>
+        <!--        read office files-->
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi</artifactId>
+                <version>4.1.1</version>
+            </dependency>
+
 
     </dependencies>
 
