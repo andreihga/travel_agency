@@ -22,7 +22,7 @@ public class CityService {
 
 
     public City getCityFromCityDTO(CityDTO cityDTO) {
-        City city = cityDAO.findCityByNameAndCountry(cityDTO.getCityName(),countryService.getCountriesByName(cityDTO.getCountryDTO()));
+        City city = cityDAO.findCityByNameAndCountry(cityDTO.getCityName(),countryService.  getCountriesByName(cityDTO.getCountryDTO()));
         return city;
     }
 
